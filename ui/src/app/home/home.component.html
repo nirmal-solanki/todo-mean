@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12 mrgnbtm">
-      <h2>ToDo List Demo</h2>
+      <h2>MANAGE TODO</h2>
       <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
         <div class="row">
           <div class="form-group col-md-6 mrgnbtm">
@@ -19,13 +19,14 @@
           <div class="form-group col-md-12 mrgnbtm">
             <label for="sel1">Status:</label>
             <select formControlName="status" class="form-control" id="sel1">
+              <option value="">Select Status</option>
               <option>To Be Done</option>
               <option>In Progress</option>
               <option>Completed</option>
             </select>
           </div>
         </div>
-        <button type="submit" [disabled]="!todoForm.valid" class="mrgnbtm btn btn-danger">Create</button>
+        <button type="submit" [disabled]="!todoForm.valid" class="mrgnbtm btn btn-primary">Create</button>
       </form>
     </div>
   </div>

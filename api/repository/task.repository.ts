@@ -30,7 +30,7 @@ export class TaskRepository {
     async updateTask(task) {
         let data = {};
         try {
-            data = await TaskModel.updateOne(task);
+            data = await TaskModel.updateOne({ "_id": task.id}, {$set: task});
         } catch(err) {
             this.logger.error('Error::' + err);
         }
